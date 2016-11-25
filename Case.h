@@ -1,6 +1,7 @@
 #ifndef CASE_H_INCLUDED
 #define CASE_H_INCLUDED
 #include <iostream>
+#include "Pion.h"
 
 class Case
 {
@@ -8,7 +9,7 @@ class Case
     private :
 
         int m_x,m_y;
-        std::string * m_pion;
+        Pion *m_pion;
 
     public :
 
@@ -16,9 +17,9 @@ class Case
         ~Case();
         int getx();
         int gety();
-        void ajoutpion(std::string pion);
+        void ajoutpion(Pion *pion);
         void enlevepion();
-        std::string getpion();
+        Pion getpion();
         bool aUnPion();
 };
 
