@@ -26,7 +26,6 @@ Console* Console::getInstance()
     {
         m_instance = new Console();
     }
-
     return m_instance;
 }
 

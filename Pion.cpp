@@ -6,7 +6,7 @@
 /// CLASSE MERE
 
 Pion::Pion()
-:m_place(nullptr)
+:m_place(0)
  {}
 
 Pion::Pion(Case* place)
@@ -17,12 +17,11 @@ Pion::Pion(Case* place)
 
 Pion::~Pion()
  {
-     delete m_place;
  }
 
 bool Pion::Plateau()
  {
-     if(m_place!=nullptr)
+     if(m_place!=0)
         return true;
      else
         return false;
@@ -36,6 +35,7 @@ bool Pion::Plateau()
      m_place = futur_case;
  }
 
+/*
  void Pion::afficher_info()
  {
    //std::cout<<m_nom<<std::endl;
@@ -50,15 +50,16 @@ bool Pion::Plateau()
  {
      return m_place;
  }
-
+*/
 
  ///CLASSES FILLES
 
 Montagne::Montagne(Case* place)
 :Pion(place)
-{
+{}
 
-}
+Montagne::~Montagne()
+{}
 
 void Montagne::afficher_char()const
 {
@@ -66,11 +67,17 @@ void Montagne::afficher_char()const
 }
 
 Animal::Animal(/*,Joueur joueur*/)
-:Pion(nullptr),m_orientation(0)
+:Pion(0),m_orientation(0)
+{}
+
+Animal::~Animal()
 {}
 
 Rhinoceros::Rhinoceros()
 {}
+Rhinoceros::~Rhinoceros()
+{}
+
 void Rhinoceros::afficher_char()const
 {
     std::cout<<"R"<<std::endl;

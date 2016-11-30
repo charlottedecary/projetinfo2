@@ -38,14 +38,13 @@ int main()
     Damier jeu(5);
     jeu.initTab();
 
-   // Rhinoceros *R = new Rhinoceros();
-   ///Animal * A = new Animal();
-   ///Animal * B = new Animal(jeu.getCase(0,4));
+    //Animal *R = new Rhinoceros();
+
     Montagne *M = new Montagne(jeu.getCase(2,2));
     //placerPion(jeu,R,2,4);
 
     affichage_plateau();
-   // affichage_pions(jeu);
+    affichage_pions(jeu);
 
 
     return 0;
