@@ -24,19 +24,11 @@ void affichage_plateau()
 
 }
 
-void affichage_pions(Damier jeu)
+void affichage_pions(Pion *pion)
 {
     Console* pConsole = NULL;
     pConsole = Console::getInstance();
-    for(int i=0;i<jeu.getTaille();i++)
-    {
-        for(int j;j<jeu.getTaille();j++)
-        {
-            if(jeu.getCase(i,j)->aUnPion())
-            {
-                pConsole->gotoLigCol(2+2*i,2+3*j);
-                jeu.getCase(i,j)->getpion()->afficher_char();
-            }
-        }
-    }
+
+    pConsole->gotoLigCol(2+2*pion->getPlace()->getx(),2+3*pion->getPlace()->getx());
+    pion->afficher_char();
 }

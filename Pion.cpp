@@ -45,12 +45,12 @@ bool Pion::Plateau()
     else
         std::cout<<"  est hors du plateau"<<std::endl;
  }
+ */
 
  Case* Pion::getPlace()
  {
      return m_place;
  }
-*/
 
  ///CLASSES FILLES
 
