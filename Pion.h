@@ -7,7 +7,7 @@ class Case;
 
 class Pion ///classe abstraite
 {
-private:
+protected:
     Case *m_place; ///case qui contient le pion
 
 public:
@@ -30,13 +30,13 @@ private :
 public :
     virtual void afficher_char()const;
 
-    Montagne(Case *m_place);
+    Montagne(Case *place);
     virtual ~Montagne();
 };
 
 class Animal : public Pion
 {
-private :
+protected :
     char m_orientation;
     //Joueur *m_joueur;
 public :
@@ -44,7 +44,7 @@ public :
     //bool pousser();
 
     Animal();
-    Animal(Case *m_place/*,Joueur joueur*/);
+    Animal(Case *place/*,Joueur joueur*/);
     virtual ~Animal();
 };
 
@@ -54,7 +54,7 @@ private :
 
 public :
     virtual void afficher_char()const;
-    Rhinoceros();
+    Rhinoceros(Case *place);
     virtual ~Rhinoceros();
 };
 

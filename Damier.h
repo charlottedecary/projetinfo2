@@ -10,7 +10,7 @@ class Damier
 private :
 
     int m_taille;
-    std::vector<std::vector<Case>> m_cases;
+    std::vector<std::vector<Case> > m_cases;
 
 public :
     Damier(int taille);
@@ -19,7 +19,7 @@ public :
     int getTaille();
     Case* getCase(int x,int y);
     void placerPion(Pion &a,int x,int y);
-    std::vector<std::vector<Case>> getcases();
+    std::vector<std::vector<Case> > getcases();
 };
 
 #endif // DAMIER_H_INCLUDED

@@ -5,8 +5,7 @@
 
 void affichage_plateau()
 {
-    std::cout<<" ______________ "<<std::endl;
-    std::cout<<"                 "<<std::endl;
+    std::cout<<"|______________|"<<std::endl;
     std::cout<<"|  |  |  |  |  |"<<std::endl;
     std::cout<<"|--+--+--+--+--|"<<std::endl;
     std::cout<<"|  |  |  |  |  |"<<std::endl;
@@ -16,11 +15,7 @@ void affichage_plateau()
     std::cout<<"|  |  |  |  |  |"<<std::endl;
     std::cout<<"|--+--+--+--+--|"<<std::endl;
     std::cout<<"|  |  |  |  |  |"<<std::endl;
-    std::cout<<"|--+--+--+--+--|"<<std::endl;
-    std::cout<<"|  |  |  |  |  |"<<std::endl;
-    std::cout<<"|--+--+--+--+--|"<<std::endl;
-    std::cout<<"|  |  |  |  |  |"<<std::endl;
-    std::cout<<" ______________ "<<std::endl;
+    std::cout<<"|______________|"<<std::endl;
 
 }
 

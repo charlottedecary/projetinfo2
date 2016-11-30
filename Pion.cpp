@@ -66,14 +66,15 @@ void Montagne::afficher_char()const
     std::cout<<"M"<<std::endl;
 }
 
-Animal::Animal(/*,Joueur joueur*/)
+Animal::Animal(Case * place/*,Joueur joueur*/)
 :Pion(0),m_orientation(0)
 {}
 
 Animal::~Animal()
 {}
 
-Rhinoceros::Rhinoceros()
+Rhinoceros::Rhinoceros(Case* place)
+:Animal(0)
 {}
 Rhinoceros::~Rhinoceros()
 {}
