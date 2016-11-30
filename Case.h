@@ -19,7 +19,7 @@ class Case
         int gety();
         void ajoutpion(Pion *pion);
         void enlevepion();
-        Pion getpion();
+        Pion* getpion();
         bool aUnPion();
 };
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Affichage.h"
 #include "Damier.h"
 #include "Case.h"
 #include "Pion.h"
@@ -6,12 +7,15 @@
 
 using namespace std;
 
-void placerPion(Damier &jeu, Pion &a,int x,int y)
+///METHODE DE JOUEUR!
+void placerPion(Damier &jeu, Pion *a,int x,int y)
 {
-    jeu.getCase(x,y)->ajoutpion(&a);
+    jeu.getCase(x,y)->ajoutpion(a);
+    a->bouger(jeu.getCase(x,y));
 }
 
-void affiche(Damier &jeu)
+///METHODE DE DAMIER ?
+/*void affiche(Damier &jeu)
 {
     int ligne = 1;
     int collonne = 1;
@@ -21,27 +25,28 @@ void affiche(Damier &jeu)
         for(int j=0;j<(jeu.getTaille());j++)
         {
             collonne=j+1;
-            cout << "contenu de la case "<<ligne<<","<<collonne<<" : "<<jeu.getCase(i,j)->getx()<<", "<<jeu.getCase(i,j)->gety(); /// ca marche bien
+            cout << "contenu de la case "<<ligne<<","<<collonne<<" : "<<jeu.getCase(i,j)->getx()<<", "<<jeu.getCase(i,j)->gety();
             if(jeu.getCase(i,j)->aUnPion())
-            cout<<", "<<jeu.getCase(i,j)->getpion().getNom(); ///ca marche pas
             cout<<endl;
         }
     }
-}
+}*/
+///NOTE : LES LIGNES ECRITES EN CETTE COULEUR SONT DES PROBLEMES DONT JE NE TE DEMANDE PAS LA RESOLUTION, JE SUIS JUSTE EN TRAIN DE LES INDENTER !///
 
 int main()
 {
-    Damier jeu(5);      ///creation damier
+    Damier jeu(5);
     jeu.initTab();
 
-    affiche(jeu);/// affichage damier
+   // Rhinoceros *R = new Rhinoceros();
+   ///Animal * A = new Animal();
+   ///Animal * B = new Animal(jeu.getCase(0,4));
+    Montagne *M = new Montagne(jeu.getCase(2,2));
+    //placerPion(jeu,R,2,4);
 
-    Pion A("Pion a");
-    Pion B("Pion b");
+    affichage_plateau();
+   // affichage_pions(jeu);
 
-    placerPion(jeu,B,2,4);
-
-    affiche(jeu);
 
     return 0;
 }

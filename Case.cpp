@@ -8,6 +8,7 @@ Case::Case(int x,int y)
  }
  Case::~Case()
  {
+     delete m_pion;
  }
 
 int Case::getx()
@@ -19,9 +20,9 @@ int Case::gety()
     return m_y;
 }
 
-Pion Case::getpion()
+Pion* Case::getpion()
 {
-        return *m_pion;
+        return m_pion;
 }
 
 bool Case::aUnPion()
@@ -34,9 +35,8 @@ bool Case::aUnPion()
 void Case::ajoutpion(Pion* pion)
  {
      m_pion = pion;
-     std::cout<<"pion ajouté!"<<std::endl;
  }
 void Case::enlevepion()
 {
-    m_pion=0;
+    m_pion=nullptr;
 }
