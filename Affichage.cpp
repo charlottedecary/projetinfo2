@@ -24,11 +24,8 @@ void affichage_plateau()
 
 }
 
-void affichage_pions(Pion *pion)
+void affichage_pions(Pion *pion,Console* pConsole)
 {
-    Console* pConsole = NULL;
-    pConsole = Console::getInstance();
-
-    pConsole->gotoLigCol(2+2*pion->getPlace()->getx(),2+3*pion->getPlace()->getx());
+    pConsole->gotoLigCol(2+2*pion->getPlace()->getx(),1+3*pion->getPlace()->getx());
     pion->afficher_char();
 }

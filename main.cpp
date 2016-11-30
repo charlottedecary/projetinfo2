@@ -35,16 +35,20 @@ void placerPion(Damier &jeu, Pion *a,int x,int y)
 
 int main()
 {
+    Console* pConsole = NULL;
+    pConsole = Console::getInstance();
+
     Damier jeu(5);
     jeu.initTab();
 
-    //Animal *R = new Rhinoceros();
+    //
+    Rhinoceros *R = new Rhinoceros();
 
-    Montagne *M = new Montagne(jeu.getCase(2,2));
+    Pion *M = new Montagne(jeu.getCase(2,2));
     //placerPion(jeu,R,2,4);
 
     affichage_plateau();
-    affichage_pions(jeu);
+    affichage_pions(M,pConsole);
 
 
     return 0;
